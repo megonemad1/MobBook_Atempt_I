@@ -4,31 +4,37 @@
 		<meta name="viewport" Content="width=device-width, inital-scale=0.1">
 		<link rel="stylesheet" href="static/bootstrap.css" media="screen">
 	</head>
-	<body>
-		<div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-          	<p> test</p>
-          </div>
-      </div>
-
-
-
-		<div class="container">
-		<dev class ="col-md-3">
-		<ul class="nav nav-pills nav-stacked">
-			<li> this is a test</li>
-			<li> this is a test</li>
-			<li> this is a test</li>
-		</ul>
+	<body bgcolor="#E6E6FA">
+		<div class="col-md-12">
+<nav class="navbar navbar-inverse" role="navigation">
+  
+  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Brand</a>
+</nav>
+</div>
+<br>
+<div class="row">
+		<div class="col-md-6">
+			<div class="jumbotron" >
+			  <h1>Hello, {{optid}}!</h1>
+			    <p><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
+			    <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
+			</div>
 		</div>
-		<div role="main" class ="col-md-9">
-		{% for post in posts %}
-	   		<li><h2>{{ post['title'] }}</h2>{{ post['text']|safe }}
- 		{% else %}
-    		<li><em>Unbelievable. No posts here so far!</em>
-  		{% endfor %}
- 	 	</div>	
- 	 	</div>			
+		<div class="container-fluid col-md-6" >
+      	<ul class="nav nav-pills nav-stacked navbar-left">
+ <li role="presentation" class="active"><a href="/">Home</a></li>
+  	{% for o in option_list %}
+		<li role="presentation"><a href="{{ o.optid }}">{{ o.optid }}</a></li>		
+	{% else %}
+	    <li role="presentation"><a href="About">there aren't any more parts to this story</a></li>
+	 {% endfor %}
+	</div>
+</div>
 	</body>
 </html>
