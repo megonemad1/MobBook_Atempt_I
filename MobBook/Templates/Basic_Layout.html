@@ -22,7 +22,13 @@
 		<div class="col-md-6">
 			<div class="jumbotron" >
 			  <h1>Hello, {{optid}}!</h1>
-			    <p><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
+			    <br><br><br>
+			    <form action="" method="post">
+			    <input type = "text" placeholder="enter Your Mindless drivvel here" name="options" value="{{request.form.username }}">
+			    <br>
+				<input class="button1" type="submit" value="Select">
+				</form>
+			    <br><br><br><br><br><br><br><br><br>
 			    <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
 			</div>
 		</div>
