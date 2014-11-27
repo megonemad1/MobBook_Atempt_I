@@ -2355,7 +2355,7 @@ output {
 }
 .form-control {
   display: block;
-  width: 100%;
+  width: 50%;
   height: 34px;
   padding: 6px 12px;
   font-size: 14px;
@@ -3641,6 +3641,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   padding-left: 0;
   margin-bottom: 0;
   list-style: none;
+  width: 100%;
 }
 .nav > li {
   position: relative;
@@ -4620,12 +4621,14 @@ a.badge:focus {
   margin-left: 3px;
 }
 .jumbotron {
+    padding-left: 5% !important;
+padding-right: 5% !important; 
   padding: 30px 15px;
   margin-bottom: 30px;
   color: inherit;
   background-color: #eee;
-  -webkit-border-radius: 0 5% 5% 0;
-  border-radius: 0 5% 5% 0;
+  -webkit-border-radius: 5% 5% 5% 5%;
+  border-radius: 5% 5% 5% 5%;
 }
 .jumbotron h1,
 .jumbotron .h1 {
@@ -4654,6 +4657,7 @@ a.badge:focus {
   .container-fluid .jumbotron {
     padding-right: 60px;
     padding-left: 60px;
+
   }
   .jumbotron h1,
   .jumbotron .h1 {
