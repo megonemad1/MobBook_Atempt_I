@@ -8,8 +8,8 @@
 		<div class="col-md-12">
 			<nav class="navbar navbar-inverse" role="navigation">
       			<a class="navbar-brand" href="/">Mob Book</a>
-		   	   	<a class="navbar-brand" href="About">About</a>
-      			<a class="navbar-brand" href="Faq">Faq</a>
+		   	   	<a class="navbar-brand" href="/About">About</a>
+      			<a class="navbar-brand" href="/Faq">Faq</a>
 			</nav>
 		</div>
 		<br>
@@ -47,7 +47,7 @@
   						{% for o in Child_list %}
 							<li role="presentation"><a href="/ID/{{o[0]}}"><h4>{{ o[4] }}</h4></a></li>		
 						{% else %}
-	    					<li role="presentation"><a href="About"><h4>there aren't any more parts to this story</h4></a></li>
+	    					<li role="presentation"><a href="/About"><h4>there aren't any more parts to this story</h4></a></li>
 	 					{% endfor %}
 	 					{% if Node[1] != 0 %}
 	 					<li role="presentation"><a href="/ID/{{Node[1]}}"><h4>Previous</h4></a></li>	
