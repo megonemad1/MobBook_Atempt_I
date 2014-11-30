@@ -7,9 +7,10 @@
 	<body bgcolor="#E6E6FA">
 		<div class="col-md-12">
 			<nav class="navbar navbar-inverse" role="navigation">
-      			<a class="navbar-brand" href="/">Mob Book</a>
+      			<a class="navbar-brand" href="/">#MobBook</a>
 		   	   	<a class="navbar-brand" href="/About">About</a>
       			<a class="navbar-brand" href="/Faq">Faq</a>
+      			<a class="navbar-brand" href="/StorySoFar/{{Node.Id}}">View The Story So Far</a>
 			</nav>
 		</div>
 		<br>
@@ -18,7 +19,7 @@
 				<div class="col-md-6">
 					<div class="jumbotron" >
 						<center>
-			  				<h1>{{Node[4]}}</h1>
+			  				<h1>{{Node.Body}}</h1>
 					    	<br><br>
 							<div id= "AddNode">
 								<form action="" method="post">
@@ -45,12 +46,12 @@
       				<ul class="nav nav-pills nav-stacked navbar-left">
  						<li role="presentation" class="active"><a href=""><center><h3>The Next Line To The Story</center></h3></a></li>
   						{% for o in Child_list %}
-							<li role="presentation"><a href="/ID/{{o[0]}}"><h4>{{ o[4] }}</h4></a></li>		
+							<li role="presentation"><a href="/ID/{{o.Id}}"><h4>{{ o.Body }}</h4></a></li>		
 						{% else %}
-	    					<li role="presentation"><a href="/About"><h4>there aren't any more parts to this story</h4></a></li>
+	    					<li role="presentation"><a id="BtnShowNav" role="button"><h4>there aren't any more parts to this story, But you can add one</h4></a></li>
 	 					{% endfor %}
-	 					{% if Node[1] != 0 %}
-	 					<li role="presentation"><a href="/ID/{{Node[1]}}"><h4>Previous</h4></a></li>	
+	 					{% if Node.Parent != 0 %}
+	 					<li role="presentation"><a href="/ID/{{Node.Id}}"><h4>Previous</h4></a></li>	
 						{% endif %}
 
 	 				</ul>
@@ -66,6 +67,7 @@
 			var section1 = document.getElementById("AddNode");
 			var button1= document.getElementById("BtnHide");
 			var section2 = document.getElementById("HideNode");
+			var button3= document.getElementById("BtnShowNav");
 			var button2= document.getElementById("BtnShow");
 			var showSection1 = function() {
     			section1.style.display = "block";
@@ -75,13 +77,20 @@
     			section1.style.display = "none";
     			section2.style.display = "block";
 			};
+
 			button1.addEventListener("click", function(e) {
     			showSection2();
 			});
+
 			button2.addEventListener("click", function(e) {
-    			showSection1()
+    			showSection1();
 			});
 			showSection2();
+			button3.addEventListener("click", function(e) {
+    			showSection1();
+			});
+
+			
 		</script>
 	</body>
 </html>

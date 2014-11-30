@@ -1,0 +1,45 @@
+<html>
+	<head>
+		<title>The Story So Far #{{book[book|length-1].Id}}</title>
+		<meta name="viewport" Content="width=device-width, inital-scale=0.1">
+		<link rel="stylesheet" href="/static/bootstrap.css" media="screen">
+	</head>
+	<body bgcolor="#E6E6FA">
+		<div class="col-md-12">
+			<nav class="navbar navbar-inverse" role="navigation">
+      			<a class="navbar-brand" href="/">#MobBook</a>
+		   	   	<a class="navbar-brand" href="/About">About</a>
+      			<a class="navbar-brand" href="/Faq">Faq</a>
+      			<a class="navbar-brand" href="/ID/{{book[book|length-1].Id}}">Back To Last Node</a>
+			</nav>
+		</div>
+		<br>
+		<div class="row">
+			<div class="col-md-12">
+				<div class="jumbotron" >
+					<center>
+						<div class="panel panel-default">
+  							<div class="panel-body">
+								<h1><u>Your Mob Book</u></h1>
+								<br>
+								<hr />
+								<br>
+								<p>
+									{% for N in book %}
+										<a href="/ID/{{N.Id}}">{{ N.Body}}</a>
+										<br>
+									{% endfor %}
+								</p>
+			  				</div>
+			  			</div>
+					</center>
+				</div>				
+			</div>
+		</div>
+		<div class="col-md-12">
+			<nav class="navbar navbar-inverse" role="navigation">
+    			<center><h4>©2014 Me Gone Mad1</h4></center>
+			</nav>
+		</div>
+	</body>
+</html>
