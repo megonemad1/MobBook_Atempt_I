@@ -1,69 +1,94 @@
 <html>
 	<head>
-		<title> Test imput page</title>
+		<title>#{{WebName}}: {{Node.Body}}</title>
 		<meta name="viewport" Content="width=device-width, inital-scale=0.1">
 		<link rel="stylesheet" href="/static/bootstrap.css" media="screen">
+		<link rel="icon" type="/image/png" href="/static/resorces/favicon16.png" sizes="16x16">
+		<link rel="icon" type="/image/png" href="/static/resorces/favicon32.png" sizes="32x32">		
+		<link rel="icon" type="/image/png" href="/static/resorces/favicon48.png" sizes="48x48">
 	</head>
-	<body bgcolor="#E6E6FA">
+	<!--<body bgcolor="#E6E6FA">-->
+	<body>
 		<div class="col-md-12">
-			<nav class="navbar navbar-inverse" role="navigation">
-      			<a class="navbar-brand" href="/">#MobBook</a>
+			<nav class="navbar navbar-inverse pfixedwide" role="navigation">
+      			<a class="navbar-brand" href="/">#{{WebName}}</a>
 		   	   	<a class="navbar-brand" href="/About">About</a>
       			<a class="navbar-brand" href="/Faq">Faq</a>
-      			<a class="navbar-brand" href="/StorySoFar/{{Node.Id}}">View The Story So Far</a>
+      			<a class="navbar-brand" href="/new">Most Recent Storys</a>
+      			<a class="navbar-brand" href="/StorySoFar/{{Node.Id}}">View Your Story So Far</a>
+			</nav>
+		</div>
+		<div class="col-md-12">
+			<nav class="navbar navbar-inverse BottomBar pfixedwide" role="navigation">
+    			<center><h4>©2014 Me Gone Mad1</h4></center>
 			</nav>
 		</div>
 		<br>
-		<div class="row">
 			<div class="col-md-12">
 				<div class="col-md-6">
-					<div class="jumbotron" >
+				<div class="pfixed"> 
+				{% if Node.Parent == 0 %}
+<div id="HomeBoxShow" class="jumbotron BlueBorder" >
+<h1>Begin Your Adventure</h1>
+<p>Welcome To SnipiTree, this is an interactive story telling websight.</p><P>Below is the first line of the story,
+each of the options on your right is one of the posible scinarios that could happen next.</p><P>
+Dont like any of them? add your own.</p>
+</div>
+</br>
+{% endif %}
+					<div class="jumbotron BlueBorder {% if Node.Parent == 0 %}PaddHomePage{% endif %}" >
 						<center>
 			  				<h1>{{Node.Body}}</h1>
-					    	<br><br>
+					    	{% if Node.Parent != 0 %}
+					    		<form action="" method="post">
+									<input type="image" src="/static/resorces/thumsup.png" alt="Submit" class ="vote" value="up" name="voteUp"{% if Rated %} disabled {% endif %}>
+									<input type="image" src="/static/resorces/thumsdown.png" alt="Submit" class="vote" value = "Down" name="voteDown" {% if Rated %} disabled {% endif %}>
+								</form>
+							{% endif %}
 							<div id= "AddNode">
 								<form action="" method="post">
 			   						<a id = "BtnHide" class="btn btn-primary btn-lg" role="button">Hide</a>
-					   				<TAB>
-					   				<input class="btn btn-primary btn-lg" role="button" type="submit" value="Add Line"></p>
-			   						<br>
 		    						<h3>
-				    					<input type = "text" placeholder="Next Line Of the Story" name="TxtAddNode" value="{{request.form.username }}" maxlength="140">
-									</h3>				 				
-									<br>
+				    					<textarea class="form-control lockSize" placeholder="Next Line Of the Story" name="TxtAddNode" value="{{request.form.username }}" maxlength="140" rows="3"></textarea>
+									</h3>
 						 			<blockquote>
 				 						<footer>max 140 charictors</footer>
-									</blockquote>			
+									</blockquote>		
+									<input class="btn btn-primary btn-lg" role="button" type="submit" value="Add Line">	
 								</form>
 							</div>
 							<div id= "HideNode">
 		     					<p><a id="BtnShow" class="btn btn-primary btn-lg" role="button">Extend The Story</a></p><br>
 							</div>
+							<small>{% if Node.Parent != 0 %}hits: {{Node.Hits}} rating: {{Node.Rating}}{% endif %}</small>
 					    </center>
 					</div>
-				</div>
+				</div></div>
+
+
 				<div class="container-fluid col-md-6" >
-      				<ul class="nav nav-pills nav-stacked navbar-left">
- 						<li role="presentation" class="active"><a href=""><center><h3>The Next Line To The Story</center></h3></a></li>
+      				<ul class="nav nav-pills nav-stacked navbar-left PadBottom">
+ 						<li role="presentation" class="BlueFill"><h2>The Next Line To The Story:</h2></li>
   						{% for o in Child_list %}
-							<li role="presentation"><a href="/ID/{{o.Id}}"><h4>{{ o.Body }}</h4></a></li>		
+							<li role="presentation"><a href="/ID/{{o.Id}}"><h3>{{ o.Body }} <small>hits: {{o.Hits}} rating: {{o.Rating}}</small></h3></a></li>		
 						{% else %}
-	    					<li role="presentation"><a id="BtnShowNav" role="button"><h4>there aren't any more parts to this story, But you can add one</h4></a></li>
+	    					<li role="presentation" ><a id="BtnShowNav" role="button"><h3>there aren't any more parts to this story, But you can add one</h3></a></li>
 	 					{% endfor %}
+	 					{% if Node.Child_list %}
+	 					<li role="presentation"><a id="BtnShowNav" role="button"><h3>Add a new part to the story.</h3></a></li>
+	 					{% endif %}
 	 					{% if Node.Parent != 0 %}
-	 					<li role="presentation"><a href="/ID/{{Node.Id}}"><h4>Previous</h4></a></li>	
+	 					<li role="presentation"><a href="/ID/{{Node.Parent}}"><h3>Previous</h3></a></li>	
 						{% endif %}
 
 	 				</ul>
-				</div>
+				
 			</div>
 		</div>
-		<div class="col-md-12">
-			<nav class="navbar navbar-inverse" role="navigation">
-    			<center><h4>©2014 Me Gone Mad1</h4></center>
-			</nav>
-		</div>
+		</br>
 		<script>
+		var section3 = document.getElementById("HomeBoxShow");
+
 			var section1 = document.getElementById("AddNode");
 			var button1= document.getElementById("BtnHide");
 			var section2 = document.getElementById("HideNode");
@@ -72,10 +97,12 @@
 			var showSection1 = function() {
     			section1.style.display = "block";
  			   	section2.style.display = "none";
+ 			   	section3.style.display="none";
 			};
 			var showSection2 = function() {
     			section1.style.display = "none";
     			section2.style.display = "block";
+ 			   	section3.style.display="block";
 			};
 
 			button1.addEventListener("click", function(e) {
@@ -88,9 +115,7 @@
 			showSection2();
 			button3.addEventListener("click", function(e) {
     			showSection1();
-			});
-
-			
+			});			
 		</script>
 	</body>
 </html>

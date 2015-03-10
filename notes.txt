@@ -1,0 +1,1 @@
+width = 992 screen right layout

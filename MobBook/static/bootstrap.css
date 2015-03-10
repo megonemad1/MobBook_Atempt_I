@@ -901,7 +901,7 @@ html {
 }
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 14px;
+  font-size: 10px;
   line-height: 1.42857143;
   color: #333;
   background-color: #fff;
@@ -1088,32 +1088,32 @@ h2,
 }
 h3,
 .h3 {
-  font-size: 24px;
+  font-size: 18px;
 }
 h4,
 .h4 {
-  font-size: 18px;
+  font-size: 13px;
 }
 h5,
 .h5 {
-  font-size: 14px;
+  font-size: 10px;
 }
 h6,
 .h6 {
-  font-size: 12px;
+  font-size: 9px;
 }
 p {
   margin: 0 0 10px;
 }
 .lead {
   margin-bottom: 20px;
-  font-size: 16px;
+  font-size: 12px;
   font-weight: 300;
   line-height: 1.4;
 }
 @media (min-width: 768px) {
   .lead {
-    font-size: 21px;
+    font-size: 17px;
   }
 }
 small,
@@ -1283,7 +1283,7 @@ abbr[data-original-title] {
 blockquote {
   padding: 10px 20px;
   margin: 0 0 20px;
-  font-size: 17.5px;
+  font-size: 13px;
   border-left: 5px solid #eee;
 }
 blockquote p:last-child,
@@ -1366,7 +1366,7 @@ pre {
   display: block;
   padding: 9.5px;
   margin: 0 0 10px;
-  font-size: 13px;
+  font-size: 9px;
   line-height: 1.42857143;
   color: #333;
   word-break: break-all;
@@ -2305,7 +2305,7 @@ legend {
   width: 100%;
   padding: 0;
   margin-bottom: 20px;
-  font-size: 21px;
+  font-size: 15px;
   line-height: inherit;
   color: #333;
   border: 0;
@@ -2349,7 +2349,7 @@ input[type="checkbox"]:focus {
 output {
   display: block;
   padding-top: 7px;
-  font-size: 14px;
+  font-size: 10px;
   line-height: 1.42857143;
   color: #555;
 }
@@ -2358,7 +2358,7 @@ output {
   width: 50%;
   height: 34px;
   padding: 6px 12px;
-  font-size: 14px;
+  font-size: 10px;
   line-height: 1.42857143;
   color: #555;
   background-color: #fff;
@@ -2396,6 +2396,7 @@ fieldset[disabled] .form-control {
 }
 textarea.form-control {
   height: auto;
+  width: 60%;
 }
 input[type="search"] {
   -webkit-appearance: none;
@@ -2498,7 +2499,7 @@ fieldset[disabled] .checkbox label {
 .form-group-sm .form-control {
   height: 30px;
   padding: 5px 10px;
-  font-size: 12px;
+  font-size: 9px;
   line-height: 1.5;
   border-radius: 3px;
 }
@@ -2517,7 +2518,7 @@ select[multiple].form-group-sm .form-control {
 .form-group-lg .form-control {
   height: 46px;
   padding: 10px 16px;
-  font-size: 18px;
+  font-size: 13px;
   line-height: 1.33;
   border-radius: 6px;
 }
@@ -2752,7 +2753,7 @@ select[multiple].form-group-lg .form-control {
   display: inline-block;
   padding: 6px 12px;
   margin-bottom: 0;
-  font-size: 14px;
+  font-size: 9px;
   font-weight: normal;
   line-height: 1.42857143;
   text-align: center;
@@ -3108,21 +3109,21 @@ fieldset[disabled] .btn-link:focus {
 .btn-lg,
 .btn-group-lg > .btn {
   padding: 10px 16px;
-  font-size: 18px;
+  font-size: 13px;
   line-height: 1.33;
   border-radius: 6px;
 }
 .btn-sm,
 .btn-group-sm > .btn {
   padding: 5px 10px;
-  font-size: 12px;
+  font-size: 9px;
   line-height: 1.5;
   border-radius: 3px;
 }
 .btn-xs,
 .btn-group-xs > .btn {
   padding: 1px 5px;
-  font-size: 12px;
+  font-size: 9px;
   line-height: 1.5;
   border-radius: 3px;
 }
@@ -3201,7 +3202,7 @@ tbody.collapse.in {
   min-width: 160px;
   padding: 5px 0;
   margin: 2px 0 0;
-  font-size: 14px;
+  font-size: 10px;
   text-align: left;
   list-style: none;
   background-color: #fff;
@@ -3276,7 +3277,7 @@ tbody.collapse.in {
 .dropdown-header {
   display: block;
   padding: 3px 20px;
-  font-size: 12px;
+  font-size: 9px;
   line-height: 1.42857143;
   color: #777;
   white-space: nowrap;
@@ -3505,7 +3506,7 @@ tbody.collapse.in {
 .input-group-lg > .input-group-btn > .btn {
   height: 46px;
   padding: 10px 16px;
-  font-size: 18px;
+  font-size: 13px;
   line-height: 1.33;
   border-radius: 6px;
 }
@@ -3528,7 +3529,7 @@ select[multiple].input-group-lg > .input-group-btn > .btn {
 .input-group-sm > .input-group-btn > .btn {
   height: 30px;
   padding: 5px 10px;
-  font-size: 12px;
+  font-size: 9px;
   line-height: 1.5;
   border-radius: 3px;
 }
@@ -3564,7 +3565,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .input-group-addon {
   padding: 6px 12px;
-  font-size: 14px;
+  font-size: 10px;
   font-weight: normal;
   line-height: 1;
   color: #555;
@@ -3575,12 +3576,12 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .input-group-addon.input-sm {
   padding: 5px 10px;
-  font-size: 12px;
+  font-size: 9px;
   border-radius: 3px;
 }
 .input-group-addon.input-lg {
   padding: 10px 16px;
-  font-size: 18px;
+  font-size: 13px;
   border-radius: 6px;
 }
 .input-group-addon input[type="radio"],
@@ -3639,6 +3640,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .nav {
   padding-left: 0;
+  margin-top: 50px;
   margin-bottom: 0;
   list-style: none;
   width: 100%;
@@ -3651,11 +3653,12 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   position: relative;
   display: block;
   padding: 10px 15px;
+  background-color: #eee;      /* LIST BG COLOUR */
 }
 .nav > li > a:hover,
 .nav > li > a:focus {
   text-decoration: none;
-  background-color: #eee;
+  background-color: #fff;      /* LIST BG COLOUR WHEN HOVERED */
 }
 .nav > li.disabled > a {
   color: #777;
@@ -3682,6 +3685,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .nav > li > a > img {
   max-width: none;
 }
+
 .nav-tabs {
   border-bottom: 1px solid #ddd;
 }
@@ -3945,7 +3949,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   float: left;
   height: 50px;
   padding: 15px 15px;
-  font-size: 18px;
+  font-size: 20px;
   line-height: 20px;
 }
 .navbar-brand:hover,
@@ -4266,11 +4270,11 @@ fieldset[disabled] .navbar-default .btn-link:focus {
 }
 .navbar-inverse .navbar-brand:hover,
 .navbar-inverse .navbar-brand:focus {
-  color: #fff;
+  color: #337ab7;
   background-color: transparent;
 }
 .navbar-inverse .navbar-text {
-  color: #9d9d9d;
+  color: #eee;
 }
 .navbar-inverse .navbar-nav > li > a {
   color: #9d9d9d;
@@ -4443,7 +4447,7 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 .pagination-lg > li > a,
 .pagination-lg > li > span {
   padding: 10px 16px;
-  font-size: 18px;
+  font-size: 13px;
 }
 .pagination-lg > li:first-child > a,
 .pagination-lg > li:first-child > span {
@@ -4458,7 +4462,7 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 .pagination-sm > li > a,
 .pagination-sm > li > span {
   padding: 5px 10px;
-  font-size: 12px;
+  font-size: 9px;
 }
 .pagination-sm > li:first-child > a,
 .pagination-sm > li:first-child > span {
@@ -4579,7 +4583,7 @@ a.label:focus {
   display: inline-block;
   min-width: 10px;
   padding: 3px 7px;
-  font-size: 12px;
+  font-size: 9px;
   font-weight: bold;
   line-height: 1;
   color: #fff;
@@ -4609,7 +4613,7 @@ a.badge:focus {
 .list-group-item.active > .badge,
 .nav-pills > .active > a > .badge {
   color: #337ab7;
-  background-color: #fff;
+  background-color: #;
 }
 .list-group-item > .badge {
   float: right;
@@ -4621,22 +4625,26 @@ a.badge:focus {
   margin-left: 3px;
 }
 .jumbotron {
-    padding-left: 5% !important;
-padding-right: 5% !important; 
+ 
+   padding-left: 5% !important;
+  padding-right: 5% !important;
   padding: 30px 15px;
-  margin-bottom: 30px;
   color: inherit;
   background-color: #eee;
   -webkit-border-radius: 5% 5% 5% 5%;
   border-radius: 5% 5% 5% 5%;
+    border: 2% solid #337ab7;
+    border-radius: 20px 10px 10px 10px;
+
+
 }
 .jumbotron h1,
 .jumbotron .h1 {
   color: inherit;
 }
 .jumbotron p {
-  margin-bottom: 15px;
-  font-size: 21px;
+  margin-bottom: 1px;
+  font-size: 15px;
   font-weight: 200;
 }
 .jumbotron > hr {
@@ -4652,16 +4660,17 @@ padding-right: 5% !important;
 @media screen and (min-width: 768px) {
   .jumbotron {
     padding: 48px 0;
+
   }
   .container .jumbotron,
   .container-fluid .jumbotron {
     padding-right: 60px;
     padding-left: 60px;
-
+    
   }
   .jumbotron h1,
   .jumbotron .h1 {
-    font-size: 63px;
+    font-size: 35px;
   }
 }
 .thumbnail {
@@ -4802,7 +4811,7 @@ a.thumbnail.active {
   float: left;
   width: 0;
   height: 100%;
-  font-size: 12px;
+  font-size: 9px;
   line-height: 20px;
   color: #fff;
   text-align: center;
@@ -5086,7 +5095,7 @@ a.list-group-item-danger.active:focus {
 .panel-title {
   margin-top: 0;
   margin-bottom: 0;
-  font-size: 16px;
+  font-size: 12px;
   color: inherit;
 }
 .panel-title > a {
@@ -5448,7 +5457,7 @@ a.list-group-item-danger.active:focus {
 }
 .close {
   float: right;
-  font-size: 21px;
+  font-size: 15px;
   font-weight: bold;
   line-height: 1;
   color: #000;
@@ -5598,7 +5607,7 @@ button.close {
   z-index: 1070;
   display: block;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 12px;
+  font-size: 9px;
   font-weight: normal;
   line-height: 1.4;
   visibility: visible;
@@ -5706,7 +5715,7 @@ button.close {
   max-width: 276px;
   padding: 1px;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 14px;
+  font-size: 10px;
   font-weight: normal;
   line-height: 1.42857143;
   text-align: left;
@@ -5735,7 +5744,7 @@ button.close {
 .popover-title {
   padding: 8px 14px;
   margin: 0;
-  font-size: 14px;
+  font-size: 10px;
   background-color: #f7f7f7;
   border-bottom: 1px solid #ebebeb;
   border-radius: 5px 5px 0 0;
@@ -5905,7 +5914,7 @@ button.close {
   bottom: 0;
   left: 0;
   width: 15%;
-  font-size: 20px;
+  font-size: 15px;
   color: #fff;
   text-align: center;
   text-shadow: 0 1px 2px rgba(0, 0, 0, .6);
@@ -6022,7 +6031,7 @@ button.close {
     width: 30px;
     height: 30px;
     margin-top: -15px;
-    font-size: 30px;
+    font-size: 22px;
   }
   .carousel-control .glyphicon-chevron-left,
   .carousel-control .icon-prev {
@@ -6334,5 +6343,75 @@ button.close {
   .hidden-print {
     display: none !important;
   }
+}
+.vote {
+  width:48px;
+  height:48px;
+  margin: 2%;
+}
+.lockSize{
+  resize: none;
+}
+.BlueBorder{
+border: 5px solid #337ab7;
+}
+.BlueFill{
+  border-radius: 20px 20px 0px 0px;
+ -moz-border-radius: 20px 20px 0px 0px;
+-webkit-border-radius: 20px 20px 0px 0px;
+border: 5px solid #337ab7;
+background: #337ab7;
+text-align: center;
+  color: #fff;
+}
+.PaddHomePage{
+  bottom:10%;
+}
+.PadBottom{
+ padding-bottom: 7%; 
+}
+@media (min-width: 993px){
+
+.BottomBar{
+  
+  position:fixed !important;
+  bottom:-3%;
+}
+.pfixed{
+  position:fixed !important;
+  margin-bottom: 30px;
+  margin-top: 50px;
+  width: 45%;
+}
+.pfixedwide{
+  position:fixed !important;
+  width:98%;
+  z-index: 1;
+}
+}
+@media (max-width: 992px){
+  .BottomBar{
+  
+  position:fixed !important;
+  bottom:-7%;
+}
+.pfixed{
+  width:100%;
+}
+.pfixedwide{
+  width:100%;
+  z-index: 1;
+}
+}
+.indent-5{margin-left: 5%;}
+.fulljumbo{
+   margin-top: 5%;
+    width:90%;
+    min-height: 69%;
+
+
+}
+.storysofa p{
+  font-size: 25px;
 }
 /*# sourceMappingURL=bootstrap.css.map */

@@ -1,45 +1,50 @@
 <html>
 	<head>
-		<title>The Story So Far #{{book[book|length-1].Id}}</title>
+		<title>#{{WebName}}-FAQ</title>
 		<meta name="viewport" Content="width=device-width, inital-scale=0.1">
 		<link rel="stylesheet" href="/static/bootstrap.css" media="screen">
 		<link rel="icon" type="/image/png" href="/static/resorces/favicon16.png" sizes="16x16">
 		<link rel="icon" type="/image/png" href="/static/resorces/favicon32.png" sizes="32x32">		
 		<link rel="icon" type="/image/png" href="/static/resorces/favicon48.png" sizes="48x48">
 	</head>
-	<body >
+	<body bgcolor="#E6E6FA">
 		<div class="col-md-12">
 			<nav class="navbar navbar-inverse pfixedwide" role="navigation">
       			<a class="navbar-brand" href="/">#{{WebName}}</a>
 		   	   	<a class="navbar-brand" href="/About">About</a>
       			<a class="navbar-brand" href="/Faq">Faq</a>
       			<a class="navbar-brand" href="/new">Most Recent Storys</a>
-      			<a class="navbar-brand" href="/ID/{{book[book|length-1].Id}}">Back To Last Node</a>
 			</nav>
 		</div>
 		<div class="col-md-12">
-			<nav class="navbar navbar-inverse BottomBar pfixedwide" role="navigation">
+			<nav class="navbar navbar-inverse pfixedwide bottombar" role="navigation">
     			<center><h4>©2014 Me Gone Mad1</h4></center>
 			</nav>
 		</div>
 			<div class="col-md-12">
-				<div class="jumbotron fulljumbo indent-5 BlueBorder " >
-					<center>
+				<div class="jumbotron fulljumbo indent-5 BlueBorder" >
 					<div class="bluefill">
-								<h1><u>Your Mob Book</u></h1>
-								</div>
-						<div class="panel panel-default">
-  							
-								<div class="panel-body fulljumbo storysofa">
-  							 
-								<p>								
-									{% for N in book %}<a href="/ID/{{N.Id}}">{{ N.Body}}</a> {% endfor %}
-								</p>
-			  				</div>
-			  			</div>
-					</center>
+  						<H1>FAQ</H1>
+  						</div>
+  						<div class="panel panel-default">					
+  						<div class="panel-body fulljumbo">
+							
+							<ol>
+								{% for q in faqList %}
+									<li><a href="#{{q.Question}}">{{q.Question}}</a></li>
+								{% endfor %}
+							</ol>
+							{% for q in faqList %}
+								<h3><a id="{{q.Question}}" name="{{q.Question}}">{{q.Question}}</a></h3>
+								<p><a name="{{q.Question}}">{{q.Answer}}</a></p>
+							{% endfor %}
+						</div>
+			  		
+						</div>	
+					</div>	
 				</div>				
 			</div>
+		</div>
 		
 	</body>
 </html>
